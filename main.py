@@ -19,13 +19,33 @@ class Bow(Weapon):
 
 class Fighter():
     def __init__(self, weapon: Weapon):
-        self. weapon = weapon
+        self.weapon = weapon
 
     def changeWeapon(self, weapon: Weapon):
             self.weapon = weapon
 
     def fight(self):
         print(self.weapon.attack())
+
+
+class Monster():
+    pass
+
+
+
+
+sword = Sword()
+
+bow1 = Bow()
+
+
+fighter = Fighter(Sword())
+
+fighter.fight()
+
+fighter.changeWeapon(bow1)
+
+fighter.fight()
 
 
 
