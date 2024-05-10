@@ -16,6 +16,10 @@ class Bow(Weapon):
         print("Боец совершает выстрелы из лука")
 
 
+class Hammer(Weapon):
+    def attack(self):
+        print("Наносит удары")
+
 
 class Fighter():
     def __init__(self, weapon: Weapon):
@@ -29,10 +33,11 @@ class Fighter():
 
 
 class Monster():
-    pass
+    def __init__(self, weapon: Weapon):
+        self.weapon = weapon
 
 
-
+hammer = Hammer()
 
 sword = Sword()
 
@@ -43,10 +48,11 @@ fighter = Fighter(Sword())
 
 fighter.fight()
 
+
 fighter.changeWeapon(bow1)
 
-fighter.fight()
 
+fighter.fight()
 
 
 
